@@ -1,0 +1,65 @@
+:root {
+  --pad-height: 30px;
+  --b-cinza: rgb(185, 185, 185);
+  --b-azul: rgb(25, 81, 155);
+  --b-radius: 5px; 
+}
+
+.calculadora {
+  position: fixed;
+  width: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--b-cinza);
+
+  padding: 10px;
+  border-radius: var(--b-radius);
+
+  gap: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calculadora>input{
+  height: var(--pad-height);
+  border: 1px solid var(--b-cinza);
+  border-radius: var(--b-radius);
+}
+
+.op-cont, .res-cont {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
+.op-cont>button {
+  background-color: rgb(52, 106 ,178);
+  border: 1px solid var(--b-azul);
+  color: white;
+
+  height: var(--pad-height);
+  border-radius: var(--b-radius);
+
+  flex: 1;
+}
+.op-cont>button:hover {
+  background-color: var(--b-azul);
+}
+.op-cont>button.selec {
+  background-color: rgb(225, 0, 255);
+}
+
+.op-cont, .res-cont {
+  gap: 10px;
+}
+
+.rc-item {
+  flex: 1;
+  height: var(--pad-height);
+  border: 1px solid var(--b-cinza);
+  border-radius: var(--b-radius);
+}
